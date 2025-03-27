@@ -1,0 +1,22 @@
+# Unity auto-generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# IDE
+*.csproj
+*.sln
+*.suo
+*.userprefs
+
+# Asset meta files
+**/*.meta
+!/.meta  # Исключаем корневой .meta (он нужен)
+
+# OS
+.DS_Store
+Thumbs.db
