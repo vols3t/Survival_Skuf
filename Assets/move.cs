@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 
 public class movee : MonoBehaviour
 {
@@ -7,37 +6,49 @@ public class movee : MonoBehaviour
     public float speed = 0.5f;
     private Vector2 moveVector;
 
+    public Sprite frontSprite;
+    public Sprite backSprite;
+    public Sprite leftSprite;
+    public Sprite rightSprite;
+
+    private SpriteRenderer spriteRenderer;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        moveVector.x = Input.GetAxis("Horizontal");
-        moveVector.y = Input.GetAxis("Vertical");
-        Flip();
-        rb.MovePosition(rb.position + moveVector * speed * Time.deltaTime);
+        moveVector.x = Input.GetAxisRaw("Horizontal");
+        moveVector.y = Input.GetAxisRaw("Vertical");
+
+        if (moveVector != Vector2.zero)
+        {
+            Flip();
+        }
+
+        rb.MovePosition(rb.position + moveVector.normalized * speed * Time.deltaTime);
     }
 
     void Flip()
     {
-        if (Input.GetAxis("Horizontal") < 0)
+        if (moveVector.x < 0)
         {
-            transform.localRotation = Quaternion.Euler(0, 180, 0);
+            spriteRenderer.sprite = leftSprite;
         }
-        if (Input.GetAxis("Horizontal") > 0)
+        else if (moveVector.x > 0)
         {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            spriteRenderer.sprite = rightSprite;
         }
-        if (Input.GetAxis("Vertical") > 0)
+        else if (moveVector.y > 0)
         {
-            transform.localRotation = Quaternion.Euler(180, 0, 0);
+            spriteRenderer.sprite = backSprite;
         }
-        if (Input.GetAxis("Vertical") < 0)
+        else if (moveVector.y < 0)
         {
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
+            spriteRenderer.sprite = frontSprite;
         }
     }
 }
