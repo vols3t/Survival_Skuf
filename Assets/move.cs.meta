@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4064b22ccb76ee2489caa1d89dc25c09
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - frontSprite: {fileID: -5165258577470172840, guid: 4bf756f9f82fd724cac20cd18896c72a, type: 3}
+  - backSprite: {fileID: -4959338228401752911, guid: d71fd577b78f34f4ba1518a141c94740, type: 3}
+  - leftSprite: {fileID: -4037625587253203841, guid: 49bf589cc54f6f84eb9d0393aad4b42d, type: 3}
+  - rightSprite: {fileID: -3019864505242552087, guid: 3412838022c089e47b6302a3c448c7ee, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,4 +1,3 @@
-# Unity auto-generated
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -7,16 +6,22 @@
 [Ll]ogs/
 [Mm]emoryCaptures/
 
-# IDE
+# Visual Studio
+.vscode/
 *.csproj
+*.unityproj
 *.sln
 *.suo
+*.user
 *.userprefs
-
-# Asset meta files
-**/*.meta
-!/.meta  # Исключаем корневой .meta (он нужен)
 
 # OS
 .DS_Store
 Thumbs.db
+
+# Crash logs
+sysinfo.txt
+
+# Rider
+.idea/
+*.sln.iml
