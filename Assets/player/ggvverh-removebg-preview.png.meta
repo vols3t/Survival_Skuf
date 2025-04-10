@@ -103,12 +103,12 @@ TextureImporter:
       name: ggvverh-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 27
+        x: 46
         y: 15
         width: 298
-        height: 662
+        height: 603
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 966b2325d1acd7842b1c73de7bea95dc
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ggvverh-removebg-preview_0: -4959338228401752911
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
