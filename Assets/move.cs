@@ -3,7 +3,7 @@ using UnityEngine;
 public class movee : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed = 0.5f;
+    public float speed = 0.05f;
     private Vector2 moveVector;
 
     public Sprite frontSprite;
@@ -28,10 +28,13 @@ public class movee : MonoBehaviour
         {
             Flip();
         }
-
-        rb.MovePosition(rb.position + moveVector.normalized * speed * Time.deltaTime);
     }
-
+    
+    void FixedUpdate()
+    {
+        rb.MovePosition(rb.position + moveVector.normalized * speed * Time.deltaTime / 2);
+    }
+    
     void Flip()
     {
         if (moveVector.x < 0)

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      telek-removebg-preview_0: 3705202199079429085
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
