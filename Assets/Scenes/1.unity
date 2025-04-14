@@ -310,6 +310,7 @@ GameObject:
   - component: {fileID: 653434903}
   - component: {fileID: 653434902}
   - component: {fileID: 653434901}
+  - component: {fileID: 653434904}
   m_Layer: 0
   m_Name: telek-removebg-preview_0
   m_TagString: Untagged
@@ -347,11 +348,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -1.2631509}
+  m_Offset: {x: 0, y: -1.8977605}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -361,7 +362,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.81, y: 1.4536982}
+  m_Size: {x: 2.81, y: 2.7229173}
   m_EdgeRadius: 0
 --- !u!212 &653434902
 SpriteRenderer:
@@ -433,6 +434,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &653434904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653434900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 754e7b8a5ea7cae41942327bbd5b918b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSprite: {fileID: -2423394827325598619, guid: 96cd8459c0ea2bb4189aab05f09b4661, type: 3}
 --- !u!1 &808020050
 GameObject:
   m_ObjectHideFlags: 0
