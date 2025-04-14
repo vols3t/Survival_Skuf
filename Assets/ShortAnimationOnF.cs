@@ -42,9 +42,9 @@ public class ShortAnimationOnF : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            playerIsInside = true;        
-            spriteRenderer.sprite = newSprite;
-            
+            playerIsInside = true;
+            if (!isChanging)
+                spriteRenderer.sprite = newSprite;
         }
     }
 
@@ -53,7 +53,8 @@ public class ShortAnimationOnF : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsInside = false;
-            spriteRenderer.sprite = originalSprite;
+            if (!isChanging)
+                spriteRenderer.sprite = originalSprite;
         }
     }
 }
