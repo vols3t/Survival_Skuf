@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: c416808398f20b64884c33d434ac3661
+guid: 254ab4dcb7366074d9a900180c839985
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7577300398678389092
-    second: pianino1_0
+      213: 3724023791051737391
+    second: "\u0448\u043A\u0430\u0444 1_0"
+  - first:
+      213: -7838275073120113445
+    second: "\u0448\u043A\u0430\u0444 1_1"
+  - first:
+      213: 5122012150347213405
+    second: "\u0448\u043A\u0430\u0444 1_2"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pianino1_0
+      name: "\u0448\u043A\u0430\u0444 1_0"
       rect:
         serializedVersion: 2
-        x: 63
-        y: 95
-        width: 1078
-        height: 1025
+        x: 89
+        y: 125
+        width: 819
+        height: 946
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9e49540f6508d690800000000000000
-      internalID: -7577300398678389092
+      spriteID: f290eb048e36ea330800000000000000
+      internalID: 3724023791051737391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0448\u043A\u0430\u0444 1_1"
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 1070
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc60e6995ad83390800000000000000
+      internalID: -7838275073120113445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0448\u043A\u0430\u0444 1_2"
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 119
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a2ea4c9ea051740800000000000000
+      internalID: 5122012150347213405
       vertices: []
       indices: 
       edges: []
@@ -134,8 +184,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      pianino1_0: -7577300398678389092
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

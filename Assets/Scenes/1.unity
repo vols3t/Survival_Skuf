@@ -451,6 +451,7 @@ MonoBehaviour:
   - {fileID: 548035340603860001, guid: 4794805cd85889b4ea3e22ffadda75e4, type: 3}
   - {fileID: -7562106591557133711, guid: f892885a6b3d1de43a1e2db30bc2d3ac, type: 3}
   newSprite: {fileID: -2423394827325598619, guid: c8352a8573bf66d4182d552ff083a2b4, type: 3}
+  SpriteTime: 0
 --- !u!1 &808020050
 GameObject:
   m_ObjectHideFlags: 0
@@ -890,7 +891,7 @@ Transform:
   m_GameObject: {fileID: 1678879517}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.08, y: 2.8121, z: 0}
+  m_LocalPosition: {x: 0.13, y: 2.97, z: 0}
   m_LocalScale: {x: 0.5611267, y: 0.1514912, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

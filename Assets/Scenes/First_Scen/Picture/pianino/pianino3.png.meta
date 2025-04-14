@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pianino3_0: -5848383421814352918
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
