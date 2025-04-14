@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 96cd8459c0ea2bb4189aab05f09b4661
+guid: f892885a6b3d1de43a1e2db30bc2d3ac
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2423394827325598619
-    second: telek-trigger_0
+      213: -7562106591557133711
+    second: telek-glitch3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: telek-trigger_0
+      name: telek-glitch3_0
       rect:
         serializedVersion: 2
-        x: 109
-        y: 51
-        width: 281
-        height: 398
+        x: 0
+        y: 0
+        width: 499
+        height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5641db68e3f5e5ed0800000000000000
-      internalID: -2423394827325598619
+      spriteID: 17ad898ee100e0790800000000000000
+      internalID: -7562106591557133711
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b7cf73e438ff7bc47baf217ec81aef2c
     internalID: 0
     vertices: []
     indices: 
@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      telek-glitch3_0: -7562106591557133711
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
