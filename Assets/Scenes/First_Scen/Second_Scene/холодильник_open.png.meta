@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: e38357463889d7f4fbede13fbbaa3782
+guid: dcb14c98277562643bf7a8d491ae5d76
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2327503831318142780
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_0"
+      213: -1259269243901842059
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_0"
   - first:
-      213: -7440123948601932517
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_1"
+      213: 6807816522321434583
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_1"
   - first:
-      213: -1346238985449448348
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_2"
+      213: -8666325385950883971
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_2"
   - first:
-      213: -6703153672028129011
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_3"
+      213: 8854999541426990573
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_3"
   - first:
-      213: 9171777471000046765
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_4"
+      213: -4377614831233479737
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_4"
   - first:
-      213: -2928874857960365547
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_5"
+      213: 1461457240306573191
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_5"
   - first:
-      213: -8380864352643247314
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_6"
+      213: 4414551533779212822
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_6"
   - first:
-      213: -8838528787743811445
-    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_7"
+      213: 6440763897878783215
+    second: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_7"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,7 +121,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_0"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_0"
       rect:
         serializedVersion: 2
         x: 200
@@ -136,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3f14172764fc4020800000000000000
-      internalID: 2327503831318142780
+      spriteID: 57de7a86b4d268ee0800000000000000
+      internalID: -1259269243901842059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_1"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_1"
       rect:
         serializedVersion: 2
         x: 626
@@ -158,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b1584be20be5fb890800000000000000
-      internalID: -7440123948601932517
+      spriteID: 7d71105ce093a7e50800000000000000
+      internalID: 6807816522321434583
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_2"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_2"
       rect:
         serializedVersion: 2
         x: 685
@@ -180,14 +180,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 46cd08186c2315de0800000000000000
-      internalID: -1346238985449448348
+      spriteID: d7f82764af60bb780800000000000000
+      internalID: -8666325385950883971
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_3"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_3"
       rect:
         serializedVersion: 2
         x: 937
@@ -202,14 +202,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d0978e7004d99f2a0800000000000000
-      internalID: -6703153672028129011
+      spriteID: deda009ca2743ea70800000000000000
+      internalID: 8854999541426990573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_4"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_4"
       rect:
         serializedVersion: 2
         x: 198
@@ -224,14 +224,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dac63e50403b84f70800000000000000
-      internalID: 9171777471000046765
+      spriteID: 7cbc8dc21869f33c0800000000000000
+      internalID: -4377614831233479737
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_5"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_5"
       rect:
         serializedVersion: 2
         x: 936
@@ -246,14 +246,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 51223b3a5db8a57d0800000000000000
-      internalID: -2928874857960365547
+      spriteID: 78f55eeed93284410800000000000000
+      internalID: 1461457240306573191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_6"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_6"
       rect:
         serializedVersion: 2
         x: 242
@@ -268,14 +268,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2317f5664031bb80800000000000000
-      internalID: -8380864352643247314
+      spriteID: 61ad09d0b33a34d30800000000000000
+      internalID: 4414551533779212822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_7"
+      name: "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A_open_7"
       rect:
         serializedVersion: 2
         x: 894
@@ -290,8 +290,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b88577565ec375580800000000000000
-      internalID: -8838528787743811445
+      spriteID: fe4a937f3a0326950800000000000000
+      internalID: 6440763897878783215
       vertices: []
       indices: 
       edges: []
@@ -309,15 +309,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_0": 2327503831318142780
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_1": -7440123948601932517
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_2": -1346238985449448348
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_3": -6703153672028129011
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_4": 9171777471000046765
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_5": -2928874857960365547
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_6": -8380864352643247314
-      "\u0445\u043E\u043B\u043E\u0434\u0438\u043B\u044C\u043D\u0438\u043A 1_7": -8838528787743811445
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
