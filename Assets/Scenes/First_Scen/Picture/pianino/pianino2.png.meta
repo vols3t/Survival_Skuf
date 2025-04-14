@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: aa46048a722ea1b4d941d11835295bc2
+guid: 6c05347257e28024b95511f46b605291
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5602716036668994794
-    second: 635717175225006740_0
+      213: 7402519683724341035
+    second: pianino2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 635717175225006740_0
+      name: pianino2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 432
-        height: 432
+        x: 63
+        y: 95
+        width: 1078
+        height: 1025
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae43a070d88d0cd40800000000000000
-      internalID: 5602716036668994794
+      spriteID: b2fe93f9e680bb660800000000000000
+      internalID: 7402519683724341035
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      635717175225006740_0: 5602716036668994794
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

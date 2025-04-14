@@ -7,6 +7,7 @@ public class ShortAnimationOnF : MonoBehaviour
     public Sprite newSprite;
     private Sprite originalSprite;
     private SpriteRenderer spriteRenderer;
+    public float SpriteTime;
     private bool playerIsInside = false;
     private bool isChanging = false;
 
@@ -31,7 +32,7 @@ public class ShortAnimationOnF : MonoBehaviour
         foreach (Sprite sprite in sprites)
         {
             spriteRenderer.sprite = sprite;
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(SpriteTime);
         }
         spriteRenderer.sprite = originalSprite;
 
