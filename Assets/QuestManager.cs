@@ -4,44 +4,51 @@ using UnityEngine;
 public class QuestManager : MonoBehaviour
 {
     public TextMeshProUGUI questText;
+    public bool NeedeedPressKeyboard;
+    public string NextQuestName;
 
-    
-    private string[] quests = {
-        "Пройти на кухню",
-        "Открыть холодос"
-    };
-
-    private int currentQuestIndex = 0;
+    private bool playerInside = false;
 
     void Start()
     {
-        UpdateQuestText();
+        UpdateText();
     }
 
-    public void NextQuest()
+    void Update()
     {
-        currentQuestIndex++;
-        if (currentQuestIndex < quests.Length)
+        if (NeedeedPressKeyboard && playerInside && Input.GetKeyDown(KeyCode.F))
         {
-            UpdateQuestText();
-        }
-        else
-        {
-            questText.text = "Все квесты выполнены!";
+            UpdateText();
+            Destroy(gameObject);
         }
     }
 
-    private void UpdateQuestText()
+    private void UpdateText()
     {
-        questText.text = "Текущее задание:" + '\n' + quests[currentQuestIndex];
+        questText.text = "Текущее задание:" + '\n' + NextQuestName;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            NextQuest();
-            Destroy(gameObject);
+            if (NeedeedPressKeyboard)
+            {
+                playerInside = true;
+            }
+            else
+            {
+                UpdateText();
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            playerInside = false;
         }
     }
 }
