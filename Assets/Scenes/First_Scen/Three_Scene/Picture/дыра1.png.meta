@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: fee0712b04515064a8ad923d358619eb
+guid: ed659fb981a391346a121b077325dd16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3386633394639289567
-    second: door_trigger_0
+      213: 179569679142457774
+    second: "\u0434\u044B\u0440\u04301_0"
+  - first:
+      213: 2124482913703285380
+    second: "\u0434\u044B\u0440\u04301_1"
+  - first:
+      213: 9117130801784866306
+    second: "\u0434\u044B\u0440\u04301_2"
+  - first:
+      213: -4320995563998644768
+    second: "\u0434\u044B\u0440\u04301_3"
+  - first:
+      213: -5049343940652680163
+    second: "\u0434\u044B\u0440\u04301_4"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_trigger_0
+      name: "\u0434\u044B\u0440\u04301_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 432
-        height: 432
+        x: 60
+        y: 617
+        width: 10
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdc33f7112dbffe20800000000000000
-      internalID: 3386633394639289567
+      spriteID: ea197b9fba5fd7200800000000000000
+      internalID: 179569679142457774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0434\u044B\u0440\u04301_1"
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 474
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482dbaa34fdab7d10800000000000000
+      internalID: 2124482913703285380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0434\u044B\u0440\u04301_2"
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 23
+        width: 312
+        height: 559
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 206c82bd82e868e70800000000000000
+      internalID: 9117130801784866306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0434\u044B\u0440\u04301_3"
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 172
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e572db9d6db804c0800000000000000
+      internalID: -4320995563998644768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "\u0434\u044B\u0440\u04301_4"
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 147
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c30a440702de9b0800000000000000
+      internalID: -5049343940652680163
       vertices: []
       indices: 
       edges: []
@@ -134,8 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      door_trigger_0: 3386633394639289567
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

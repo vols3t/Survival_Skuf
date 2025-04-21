@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fee0712b04515064a8ad923d358619eb
+guid: 83efd0142240b2e479b4a513587bf784
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3386633394639289567
-    second: door_trigger_0
+      213: 4071134841497547280
+    second: "\u043A\u0440\u043E\u0432\u044C_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door_trigger_0
+      name: "\u043A\u0440\u043E\u0432\u044C_0"
       rect:
         serializedVersion: 2
-        x: 0
+        x: 155
         y: 0
-        width: 432
-        height: 432
+        width: 895
+        height: 495
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fdc33f7112dbffe20800000000000000
-      internalID: 3386633394639289567
+      spriteID: 0127d2c81939f7830800000000000000
+      internalID: 4071134841497547280
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      door_trigger_0: 3386633394639289567
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
