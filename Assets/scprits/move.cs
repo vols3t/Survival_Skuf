@@ -5,7 +5,7 @@ public class movee : MonoBehaviour
     private Rigidbody2D rb;
     public float speed = 0.05f;
     private Vector2 moveVector;
-
+    public QuestManager questUI;
     public Sprite frontSprite;
     public Sprite backSprite;
     public Sprite leftSprite;
@@ -23,10 +23,15 @@ public class movee : MonoBehaviour
     {
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
-
+    
         if (moveVector != Vector2.zero)
         {
             Flip();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            questUI.ToggleScroll();
         }
     }
     
