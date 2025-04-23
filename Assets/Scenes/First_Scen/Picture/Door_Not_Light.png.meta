@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Door_Not_Light_0: 5654993811073553762
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

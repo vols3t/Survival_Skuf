@@ -1,54 +1,91 @@
-using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections.Generic;
+using TMPro;
 
 public class QuestManager : MonoBehaviour
 {
-    public TextMeshProUGUI questText;
-    public bool NeedeedPressKeyboard;
-    public string NextQuestName;
+    public static QuestManager Instance;
 
-    private bool playerInside = false;
+    public ScrollAnimator scrollAnimator;
+    public CanvasGroup questTextCanvas;
+    public TMP_Text questTextUI;
+    public List<string> quests = new List<string>();
 
-    void Start()
+    private int currentQuestIndex = 0;
+    private List<string> completedQuests = new List<string>();
+    private bool isVisible = false;
+    private const int QUESTS_PER_PAGE = 4;
+    private int currentPage = 0;
+
+    void Awake()
     {
-        UpdateText();
+        Instance = this;
+        UpdateQuestText();
     }
 
-    void Update()
+    public void ToggleScroll()
     {
-        if (NeedeedPressKeyboard && playerInside && Input.GetKeyDown(KeyCode.F))
+        if (!isVisible)
         {
-            UpdateText();
-            Destroy(gameObject);
-        }
-    }
-
-    private void UpdateText()
-    {
-        questText.text = "Текущее задание:" + '\n' + NextQuestName;
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            if (NeedeedPressKeyboard)
+            scrollAnimator.PlayOpen(() =>
             {
-                playerInside = true;
-            }
-            else
+                questTextCanvas.alpha = 1;
+                isVisible = true;
+            });
+        }
+        else
+        {
+            questTextCanvas.alpha = 0;
+            scrollAnimator.PlayClose(() =>
             {
-                UpdateText();
-                Destroy(gameObject);
-            }
+                isVisible = false;
+            });
         }
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    public void TriggerNextQuest()
     {
-        if (other.CompareTag("Player"))
+        if (currentQuestIndex >= quests.Count) return;
+
+        // Добавляем текущий квест в выполненные
+        if (currentQuestIndex >= 0)
         {
-            playerInside = false;
+            completedQuests.Add(quests[currentQuestIndex]);
         }
+
+        // Переходим к следующему квесту
+        currentQuestIndex++;
+
+        // Если набрали 4 квеста - очищаем и увеличиваем страницу
+        if (completedQuests.Count >= QUESTS_PER_PAGE)
+        {
+            completedQuests.Clear();
+            currentPage++;
+        }
+
+        UpdateQuestText();
+    }
+
+    private void UpdateQuestText()
+    {
+        string fullText = "";
+
+        int startIndex = currentPage * QUESTS_PER_PAGE;
+        for (int i = startIndex; i < completedQuests.Count + startIndex && i < quests.Count; i++)
+        {
+            fullText += $"<s>{quests[i]}</s>\n\n";
+        }
+
+        if (currentQuestIndex < quests.Count)
+        {
+            fullText += quests[currentQuestIndex];
+        }
+        else
+        {
+            fullText += "Все квесты завершены!";
+        }
+
+        questTextUI.text = fullText;
     }
 }

@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "Door_Not_Light_F \u043A\u043E\u043F\u0438\u044F_0": 1051043666996737242
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -8,7 +8,7 @@ public class TeleportOnTrigger : MonoBehaviour
     public float CameraPosY;
     private Sprite originalSprite;
     private SpriteRenderer spriteRenderer;
-
+    public bool NeededAction;
     private bool playerIsInside = false;
     private GameObject player;
 
@@ -20,8 +20,8 @@ public class TeleportOnTrigger : MonoBehaviour
 
     void Update()
     {
-        if (playerIsInside && Input.GetKeyDown(KeyCode.F))
-        {
+        if (playerIsInside && (!NeededAction  || (NeededAction && Input.GetKeyDown(KeyCode.F))))
+        {   
             if (player != null && teleportTarget != null)
             {
                 player.transform.position = teleportTarget.position;
@@ -41,7 +41,8 @@ public class TeleportOnTrigger : MonoBehaviour
         {
             playerIsInside = true;
             player = other.gameObject;
-            spriteRenderer.sprite = newSprite;
+            if (NeededAction && newSprite != null)
+                spriteRenderer.sprite = newSprite;
         }
     }
 
@@ -51,7 +52,8 @@ public class TeleportOnTrigger : MonoBehaviour
         {
             playerIsInside = false;
             player = null;
-            spriteRenderer.sprite = originalSprite;
+            if (NeededAction)
+                spriteRenderer.sprite = originalSprite;
         }
     }
 }
