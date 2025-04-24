@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 
@@ -7,7 +8,7 @@ public class QuestManager : MonoBehaviour
 {
     public static QuestManager Instance;
 
-    public ScrollAnimator scrollAnimator;
+    public CanvasGroup questPanelCanvas;
     public CanvasGroup questTextCanvas;
     public TMP_Text questTextUI;
     public List<string> quests = new List<string>();
@@ -21,6 +22,10 @@ public class QuestManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        questPanelCanvas.alpha = 0;
+        questTextCanvas.alpha = 0;
+        questPanelCanvas.gameObject.SetActive(false);
+        questTextCanvas.gameObject.SetActive(false);
         UpdateQuestText();
     }
 
@@ -28,36 +33,39 @@ public class QuestManager : MonoBehaviour
     {
         if (!isVisible)
         {
-            scrollAnimator.PlayOpen(() =>
-            {
-                questTextCanvas.alpha = 1;
-                isVisible = true;
-            });
+            questPanelCanvas.gameObject.SetActive(true);
+            questTextCanvas.gameObject.SetActive(true);
+            StartCoroutine(FadeCanvasGroup(questPanelCanvas, 1f));
+            StartCoroutine(FadeCanvasGroup(questTextCanvas, 1f));
+            isVisible = true;
         }
         else
         {
-            questTextCanvas.alpha = 0;
-            scrollAnimator.PlayClose(() =>
+            StartCoroutine(FadeCanvasGroup(questPanelCanvas, 0f, () =>
             {
-                isVisible = false;
-            });
+                questPanelCanvas.gameObject.SetActive(false);
+            }));
+            StartCoroutine(FadeCanvasGroup(questTextCanvas, 0f, () =>
+            {
+                questTextCanvas.gameObject.SetActive(false);
+            }));
+            isVisible = false;
         }
     }
 
     public void TriggerNextQuest()
     {
-        if (currentQuestIndex >= quests.Count) return;
+        if (quests == null || quests.Count == 0) return;
 
-        // Добавляем текущий квест в выполненные
+        if (currentQuestIndex + 1 >= quests.Count) return;
+
         if (currentQuestIndex >= 0)
         {
             completedQuests.Add(quests[currentQuestIndex]);
         }
 
-        // Переходим к следующему квесту
         currentQuestIndex++;
 
-        // Если набрали 4 квеста - очищаем и увеличиваем страницу
         if (completedQuests.Count >= QUESTS_PER_PAGE)
         {
             completedQuests.Clear();
@@ -67,14 +75,15 @@ public class QuestManager : MonoBehaviour
         UpdateQuestText();
     }
 
+
+
     private void UpdateQuestText()
     {
         string fullText = "";
 
-        int startIndex = currentPage * QUESTS_PER_PAGE;
-        for (int i = startIndex; i < completedQuests.Count + startIndex && i < quests.Count; i++)
+        foreach (string completed in completedQuests)
         {
-            fullText += $"<s>{quests[i]}</s>\n\n";
+            fullText += $"<s>{completed}</s>\n\n";
         }
 
         if (currentQuestIndex < quests.Count)
@@ -87,5 +96,24 @@ public class QuestManager : MonoBehaviour
         }
 
         questTextUI.text = fullText;
+    }
+
+
+
+    private IEnumerator FadeCanvasGroup(CanvasGroup group, float targetAlpha, System.Action onComplete = null)
+    {
+        float startAlpha = group.alpha;
+        float duration = 0.2f;
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            group.alpha = Mathf.Lerp(startAlpha, targetAlpha, elapsed / duration);
+            elapsed += Time.deltaTime;
+            yield return null;
+        }
+
+        group.alpha = targetAlpha;
+        onComplete?.Invoke();
     }
 }

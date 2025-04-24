@@ -40,22 +40,17 @@ public class movee : MonoBehaviour
     }
     
     void Flip()
-    {
-        if (moveVector.x < 0)
-        {
+    {   
+        if (moveVector.x < 0)  
             spriteRenderer.sprite = leftSprite;
-        }
+        
         else if (moveVector.x > 0)
-        {
             spriteRenderer.sprite = rightSprite;
-        }
+
         else if (moveVector.y > 0)
-        {
             spriteRenderer.sprite = backSprite;
-        }
+
         else if (moveVector.y < 0)
-        {
             spriteRenderer.sprite = frontSprite;
-        }
     }
 }
