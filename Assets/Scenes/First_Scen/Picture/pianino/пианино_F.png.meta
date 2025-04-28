@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 941f803b6aa2d7242b4eac53819aa261
+guid: 207a460d0f2f63f4fb67705bace7482d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7170880393122851562
-    second: quest_0
+      213: -7597360845799512477
+    second: "\u043F\u0438\u0430\u043D\u0438\u043D\u043E (2)_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: quest_0
+      name: "\u043F\u0438\u0430\u043D\u0438\u043D\u043E (2)_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 580
-        height: 612
+        x: 63
+        y: 95
+        width: 1078
+        height: 1025
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aeaa6ee79b5148360800000000000000
-      internalID: 7170880393122851562
+      spriteID: 366a8a33090c09690800000000000000
+      internalID: -7597360845799512477
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      quest_0: 7170880393122851562
+      "\u043F\u0438\u0430\u043D\u0438\u043D\u043E (2)_0": -7597360845799512477
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
