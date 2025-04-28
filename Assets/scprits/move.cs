@@ -7,10 +7,9 @@ public class movee : MonoBehaviour
     private Vector2 moveVector;
     public QuestManager questUI;
 
-    // --- Поля для спрайтов анимации ---
     [Header("Animation Sprites")]
-    public Sprite[] frontSprites; // Вниз
-    public Sprite[] backSprites;  // Вверх
+    public Sprite[] frontSprites;
+    public Sprite[] backSprites;
     public Sprite[] leftSprites;
     public Sprite[] rightSprites;
     public Sprite[] upLeftSprites;
@@ -18,17 +17,14 @@ public class movee : MonoBehaviour
     public Sprite[] downLeftSprites;
     public Sprite[] downRightSprites;
 
-    // --- Настройки анимации ---
     [Header("Animation Settings")]
-    public float timestandart = 0.5f; // Время между сменой кадров анимации
+    public float timestandart = 0.5f;
 
-    // --- Спрайт для состояния покоя ---
     [Header("Idle Settings")]
-    public Sprite standartPoz; // <<< Новый спрайт для стандартного положения (покоя)
+    public Sprite standartPoz;
 
     private SpriteRenderer spriteRenderer;
-    // private Sprite initialSprite; // <<< Больше не нужно
-    private Sprite[] currentAnimationSprites; // Текущий массив спрайтов для анимации
+    private Sprite[] currentAnimationSprites;
     private int currentFrameIndex;
     private float animationTimer;
 
@@ -37,17 +33,11 @@ public class movee : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Проверяем, есть ли SpriteRenderer
         if (spriteRenderer == null)
         {
             Debug.LogError("Компонент SpriteRenderer не найден на этом объекте!", this);
         }
-        // else
-        // {
-              // initialSprite = spriteRenderer.sprite; // <<< Убираем сохранение начального спрайта
-        // }
 
-        // Устанавливаем начальный спрайт покоя, если он назначен
         if (standartPoz != null && spriteRenderer != null)
         {
             spriteRenderer.sprite = standartPoz;
@@ -55,28 +45,21 @@ public class movee : MonoBehaviour
         else if (spriteRenderer != null && spriteRenderer.sprite == null)
         {
              Debug.LogWarning("StandartPoz sprite не назначен, и у SpriteRenderer нет начального спрайта.", this);
-             // Можно установить какой-то дефолтный спрайт, например, первый кадр frontSprites
-             // if(frontSprites != null && frontSprites.Length > 0) spriteRenderer.sprite = frontSprites[0];
         }
 
-
-        // Инициализируем переменные анимации
         currentFrameIndex = 0;
         animationTimer = 0f;
-        currentAnimationSprites = null; // Начнем без активной анимации
+        currentAnimationSprites = null;
     }
 
     void Update()
     {
-        // --- Обработка ввода ---
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
-        moveVector.Normalize(); // Нормализуем вектор
+        moveVector.Normalize();
 
-        // --- Обновление анимации ---
         UpdateAnimation();
 
-        // --- Обработка UI квестов ---
         if (Input.GetKeyDown(KeyCode.Q))
         {
             questUI.ToggleScroll();
@@ -85,7 +68,6 @@ public class movee : MonoBehaviour
 
     void FixedUpdate()
     {
-        // --- Перемещение персонажа ---
         rb.MovePosition(rb.position + moveVector * speed * Time.fixedDeltaTime);
     }
 
@@ -95,7 +77,6 @@ public class movee : MonoBehaviour
 
         if (isMoving)
         {
-            // --- Логика анимации движения (остается прежней) ---
             Sprite[] targetAnimationSprites = null;
             float angle = Mathf.Atan2(moveVector.y, moveVector.x) * Mathf.Rad2Deg;
 
@@ -132,30 +113,24 @@ public class movee : MonoBehaviour
                 if (currentFrameIndex >= currentAnimationSprites.Length) { currentFrameIndex = 0; }
                 spriteRenderer.sprite = currentAnimationSprites[currentFrameIndex];
             }
-             // Если массив анимации для текущего направления не назначен или пуст,
-             // покажем спрайт покоя как запасной вариант
             else if (standartPoz != null && spriteRenderer != null)
             {
                  spriteRenderer.sprite = standartPoz;
             }
         }
-        else // --- Если персонаж НЕ двигается (стоим на месте) ---
+        else
         {
-            // Устанавливаем спрайт стандартного положения, если он назначен
             if (spriteRenderer != null && standartPoz != null)
             {
-                // Ставим только если текущий спрайт - не standartPoz, чтобы избежать лишних вызовов
                 if (spriteRenderer.sprite != standartPoz)
                 {
                     spriteRenderer.sprite = standartPoz;
                 }
             }
-            // Если standartPoz не назначен, персонаж останется с последним кадром анимации движения
 
-            // Сбрасываем состояние анимации движения, чтобы она началась сначала при следующем движении
             currentFrameIndex = 0;
             animationTimer = 0f;
-            currentAnimationSprites = null; // Указываем, что активной анимации движения нет
+            currentAnimationSprites = null;
         }
     }
 }
