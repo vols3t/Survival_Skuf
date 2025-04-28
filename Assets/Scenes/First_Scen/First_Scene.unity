@@ -3706,7 +3706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4064b22ccb76ee2489caa1d89dc25c09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   questUI: {fileID: 727229279}
   frontSprites:
   - {fileID: 3536389310567669382, guid: 58d2758a09c59cd4eb21892c3f2b8e38, type: 3}
