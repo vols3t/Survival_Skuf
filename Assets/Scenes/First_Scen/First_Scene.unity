@@ -3066,8 +3066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -18.330002, y: 0.20999146}
-  m_SizeDelta: {x: -129.01, y: -12.01}
+  m_AnchoredPosition: {x: -19.240005, y: 0.39874268}
+  m_SizeDelta: {x: -133.82, y: -16.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299985323
 MonoBehaviour:
@@ -3762,6 +3762,7 @@ GameObject:
   - component: {fileID: 395462748}
   - component: {fileID: 395462747}
   - component: {fileID: 395462746}
+  - component: {fileID: 395462751}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -3968,6 +3969,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &395462751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395462745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66d21bb65bdc55b45aac43b962965dbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &409531587
 GameObject:
   m_ObjectHideFlags: 0
@@ -4153,6 +4166,7 @@ GameObject:
   - component: {fileID: 452699749}
   - component: {fileID: 452699748}
   - component: {fileID: 452699750}
+  - component: {fileID: 452699751}
   m_Layer: 0
   m_Name: "\u0434\u0438\u0432\u0430\u043D-no-bg-preview (carve.photos) 1_0"
   m_TagString: Untagged
@@ -4260,11 +4274,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.1801987, y: -1.7992506}
+  m_Offset: {x: 0.06842995, y: -3.0194027}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4274,8 +4288,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 36.083992, y: 1.7403622}
+  m_Size: {x: 11.317005, y: 4.1806684}
   m_EdgeRadius: 0
+--- !u!114 &452699751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452699747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbf7d92de8df644cafd962e4465e917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportTarget: {fileID: 58084193}
+  newSprite: {fileID: 0}
+  CameraPosX: 33.42
+  CameraPosY: 0.0001
+  NeededAction: 1
+  teleportDelay: 3
 --- !u!1 &458446437
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,8 +6246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 18.559998, y: 0.20999146}
-  m_SizeDelta: {x: -129.42, y: -12.01}
+  m_AnchoredPosition: {x: 19.130005, y: 0.39811707}
+  m_SizeDelta: {x: -133.8, y: -16.641}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749481500
 MonoBehaviour:
@@ -7354,7 +7386,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.044965148, y: -3.4459918}
+  m_Offset: {x: -12.33994, y: -3.6639078}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7364,7 +7396,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 4.52007, y: 1.7214227}
+  m_Size: {x: 29.289873, y: 2.1572547}
   m_EdgeRadius: 0
 --- !u!1 &918832862
 GameObject:
@@ -8429,8 +8461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.073}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -55.070007, y: 0.21000671}
-  m_SizeDelta: {x: -129.98, y: -12.01}
+  m_AnchoredPosition: {x: -57.39, y: 0.3999939}
+  m_SizeDelta: {x: -134.61, y: -16.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024731224
 MonoBehaviour:
@@ -9683,6 +9715,7 @@ MonoBehaviour:
   CameraPosX: 0
   CameraPosY: 0
   NeededAction: 0
+  teleportDelay: 0
 --- !u!61 &1204658312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11927,8 +11960,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 57.929993, y: 0.2087555}
-  m_SizeDelta: {x: -129.28, y: -12.012}
+  m_AnchoredPosition: {x: 60.01999, y: 0.39924622}
+  m_SizeDelta: {x: -133.86, y: -16.64}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703375616
 MonoBehaviour:
@@ -13481,7 +13514,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 31.58, y: 130.6}
+  m_AnchoredPosition: {x: 30.5, y: 123.3}
   m_SizeDelta: {x: 182.61, y: 18.94}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925956171
@@ -14401,6 +14434,7 @@ MonoBehaviour:
   CameraPosX: -0.5
   CameraPosY: 23.75
   NeededAction: 0
+  teleportDelay: 0
 --- !u!61 &2060534269
 BoxCollider2D:
   m_ObjectHideFlags: 0

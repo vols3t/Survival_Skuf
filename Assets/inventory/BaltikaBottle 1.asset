@@ -17,3 +17,4 @@ MonoBehaviour:
   description: "\u0425\u043E\u043B\u043E\u0434\u043D\u0430\u044F \u0431\u0443\u0442\u044B\u043B\u043E\u0447\u043A\u0430
     \u043F\u0438\u0432\u0430\u0441\u0430"
   removeAfterUse: 1
+  triggerToActivate: {fileID: 0}

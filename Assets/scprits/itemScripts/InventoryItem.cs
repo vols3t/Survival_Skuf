@@ -10,6 +10,5 @@ public class InventoryItem : ScriptableObject
 
     public virtual void Use()
     {
-        Debug.Log($"Используется предмет: {itemName}");
     }
 }

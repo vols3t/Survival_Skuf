@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class TeleportOnTrigger : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class TeleportOnTrigger : MonoBehaviour
     private bool playerIsInside = false;
     private GameObject player;
 
+    public float teleportDelay = 0f; 
+
+    private bool isTeleporting = false; 
+
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -20,17 +25,15 @@ public class TeleportOnTrigger : MonoBehaviour
 
     void Update()
     {
-        if (playerIsInside && (!NeededAction  || (NeededAction && Input.GetKeyDown(KeyCode.F))))
-        {   
-            if (player != null && teleportTarget != null)
+        if (playerIsInside && (!NeededAction || (NeededAction && Input.GetKeyDown(KeyCode.F))))
+        {
+            if (!isTeleporting)
             {
-                player.transform.position = teleportTarget.position;
-
-                Camera.main.transform.position = new Vector3(
-                    CameraPosX,
-                    CameraPosY,
-                    Camera.main.transform.position.z
-                );
+                isTeleporting = true;
+                if (teleportDelay > 0f)
+                    StartCoroutine(TeleportWithDelay());
+                else
+                    Teleport();
             }
         }
     }
@@ -54,6 +57,27 @@ public class TeleportOnTrigger : MonoBehaviour
             player = null;
             if (NeededAction)
                 spriteRenderer.sprite = originalSprite;
+            isTeleporting = false; 
+        }
+    }
+
+    private IEnumerator TeleportWithDelay()
+    {
+        yield return new WaitForSeconds(teleportDelay);
+        Teleport();
+    }
+
+    private void Teleport()
+    {
+        if (player != null && teleportTarget != null)
+        {
+            player.transform.position = teleportTarget.position;
+
+            Camera.main.transform.position = new Vector3(
+                CameraPosX,
+                CameraPosY,
+                Camera.main.transform.position.z
+            );
         }
     }
 }
