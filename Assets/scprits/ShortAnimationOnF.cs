@@ -1,20 +1,30 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(SpriteRenderer), typeof(AudioSource), typeof(Collider2D))]
 public class ShortAnimationOnF : MonoBehaviour
 {
-    public Sprite[] sprites;
-    public Sprite newSprite;
-    private Sprite originalSprite;
-    private SpriteRenderer spriteRenderer;
-    public float SpriteTime;
-    private bool playerIsInside = false;
-    private bool isChanging = false;
+    [Header("Animation Sprites")]
+    public Sprite[] sprites;        
+    public Sprite   newSprite;     
+    public float    spriteTime = .1f;
+
+    [Header("Sound")]
+    public AudioClip clip;         
+    public AudioSource source;    
+    private SpriteRenderer rend;
+    private Sprite           originalSprite;
+    private bool             playerIsInside;
+    private bool             isChanging;
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalSprite = spriteRenderer.sprite;
+        rend = GetComponent<SpriteRenderer>();
+        originalSprite = rend.sprite;
+
+        source = GetComponent<AudioSource>();
+        source.playOnAwake = false;
+        source.loop = false;
     }
 
     void Update()
@@ -29,13 +39,16 @@ public class ShortAnimationOnF : MonoBehaviour
     {
         isChanging = true;
 
-        foreach (Sprite sprite in sprites)
-        {
-            spriteRenderer.sprite = sprite;
-            yield return new WaitForSeconds(SpriteTime);
-        }
-        spriteRenderer.sprite = originalSprite;
+        if (clip != null)
+            source.PlayOneShot(clip);
 
+        foreach (var spr in sprites)
+        {
+            rend.sprite = spr;
+            yield return new WaitForSeconds(spriteTime);
+        }
+
+        rend.sprite = originalSprite;
         isChanging = false;
     }
 
@@ -44,8 +57,8 @@ public class ShortAnimationOnF : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsInside = true;
-            if (!isChanging)
-                spriteRenderer.sprite = newSprite;
+            if (!isChanging && newSprite != null)
+                rend.sprite = newSprite;
         }
     }
 
@@ -55,7 +68,7 @@ public class ShortAnimationOnF : MonoBehaviour
         {
             playerIsInside = false;
             if (!isChanging)
-                spriteRenderer.sprite = originalSprite;
+                rend.sprite = originalSprite;
         }
     }
 }

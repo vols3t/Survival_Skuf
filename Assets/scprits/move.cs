@@ -27,9 +27,9 @@ public class movee : MonoBehaviour
     public Sprite standartPoz;
 
     [Header("Footstep Sound")]
-    public AudioSource footstepSource;  // перетащите сюда AudioSource
-    public AudioClip footstepClip;      // перетащите сюда AudioClip шага
-    public float stepInterval = 0.4f;   // время между шагами
+    public AudioSource footstepSource;  
+    public AudioClip footstepClip;      
+    public float stepInterval = 0.4f;  
 
     public QuestManager questUI;
 
@@ -41,21 +41,17 @@ public class movee : MonoBehaviour
 
     void Start()
     {
-        // кэш
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // инициализируем спрайт простоя
         if (standartPoz != null)
             spriteRenderer.sprite = standartPoz;
 
-        // настраиваем AudioSource
         footstepSource = footstepSource ?? GetComponent<AudioSource>();
         footstepSource.playOnAwake = false;
         footstepSource.loop = false;
         stepTimer = stepInterval;
 
-        // сброс анимации
         currentFrameIndex = 0;
         animationTimer = 0f;
         currentAnimationSprites = null;
@@ -83,7 +79,6 @@ public class movee : MonoBehaviour
     {
         bool isMoving = moveVector != Vector2.zero;
 
-        // ----- FOOTSTEP SOUND -----
         if (isMoving && footstepSource != null && footstepClip != null)
         {
             stepTimer += Time.deltaTime;
@@ -95,11 +90,9 @@ public class movee : MonoBehaviour
         }
         else
         {
-            // сброс при остановке, чтобы при следующем старте сразу был шаг
             stepTimer = stepInterval;
         }
 
-        // ----- SPRITE ANIMATION -----
         if (isMoving)
         {
             Sprite[] targetSprites = null;
@@ -138,7 +131,6 @@ public class movee : MonoBehaviour
         }
         else
         {
-            // стоим на месте
             if (spriteRenderer.sprite != standartPoz && standartPoz != null)
                 spriteRenderer.sprite = standartPoz;
 

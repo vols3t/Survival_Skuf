@@ -22,7 +22,7 @@ public class FootstepSound : MonoBehaviour
     void Update()
     {
         // Если двигаемся
-        if (rb.velocity.magnitude > 0.1f && footstepClip != null)
+        if (rb.linearVelocity.magnitude > 0.1f && footstepClip != null)
         {
             stepTimer += Time.deltaTime;
             if (stepTimer >= stepInterval)
@@ -33,7 +33,6 @@ public class FootstepSound : MonoBehaviour
         }
         else
         {
-            // сброс, чтобы при старте движения сразу заиграл шаг
             stepTimer = stepInterval;
         }
     }

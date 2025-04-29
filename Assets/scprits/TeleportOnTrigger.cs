@@ -1,41 +1,77 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(SpriteRenderer), typeof(Collider2D))]
 public class TeleportOnTrigger : MonoBehaviour
 {
-    public Transform teleportTarget;
-    public Sprite newSprite;
-    public float CameraPosX;
-    public float CameraPosY;
-    private Sprite originalSprite;
+    [Header("Sound")]
+    public AudioSource teleportSource; 
+    public AudioClip   teleportClip;   
+
+    [Header("Teleport")]
+    public Transform teleportTarget;   
+    public float     teleportDelay;    
+
+    [Header("Sprite (optional)")]
+    public Sprite newSprite;           
     private SpriteRenderer spriteRenderer;
-    public bool NeededAction;
-    private bool playerIsInside = false;
+    private Sprite originalSprite;
+    private bool   playerIsInside;
+    private bool   isTeleporting;
     private GameObject player;
-
-    public float teleportDelay = 0f; 
-
-    private bool isTeleporting = false; 
 
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        originalSprite = spriteRenderer.sprite;
+        spriteRenderer  = GetComponent<SpriteRenderer>();
+        originalSprite  = spriteRenderer.sprite;
+
+        // если в инспекторе AudioSource не проставлен — попробуем взять свой
+        if (teleportSource == null)
+            teleportSource = GetComponent<AudioSource>();
+
+        if (teleportSource != null)
+        {
+            teleportSource.playOnAwake = false;
+            teleportSource.loop        = false;
+        }
     }
 
     void Update()
     {
-        if (playerIsInside && (!NeededAction || (NeededAction && Input.GetKeyDown(KeyCode.F))))
+        // Если игрок в триггере и не в процессе телепортации — ждём F
+        if (playerIsInside && !isTeleporting && Input.GetKeyDown(KeyCode.F))
         {
-            if (!isTeleporting)
-            {
-                isTeleporting = true;
-                if (teleportDelay > 0f)
-                    StartCoroutine(TeleportWithDelay());
-                else
-                    Teleport();
-            }
+            if (teleportDelay > 0f)
+                StartCoroutine(DoTeleportWithDelay());
+            else
+                DoTeleport();
         }
+    }
+
+    private IEnumerator DoTeleportWithDelay()
+    {
+        isTeleporting = true;
+        yield return new WaitForSeconds(teleportDelay);
+        DoTeleport();
+    }
+
+    private void DoTeleport()
+    {
+        // Проигрываем звук (если указано)
+        if (teleportSource != null && teleportClip != null)
+            teleportSource.PlayOneShot(teleportClip);
+
+        // Перемещаем игрока и камеру
+        if (player != null && teleportTarget != null)
+        {
+            player.transform.position = teleportTarget.position;
+            var camPos = Camera.main.transform.position;
+            Camera.main.transform.position = new Vector3(teleportTarget.position.x,
+                                                         teleportTarget.position.y,
+                                                         camPos.z);
+        }
+
+        isTeleporting = false;
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -43,8 +79,8 @@ public class TeleportOnTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsInside = true;
-            player = other.gameObject;
-            if (NeededAction && newSprite != null)
+            player         = other.gameObject;
+            if (newSprite != null)
                 spriteRenderer.sprite = newSprite;
         }
     }
@@ -54,30 +90,9 @@ public class TeleportOnTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             playerIsInside = false;
-            player = null;
-            if (NeededAction)
-                spriteRenderer.sprite = originalSprite;
-            isTeleporting = false; 
-        }
-    }
-
-    private IEnumerator TeleportWithDelay()
-    {
-        yield return new WaitForSeconds(teleportDelay);
-        Teleport();
-    }
-
-    private void Teleport()
-    {
-        if (player != null && teleportTarget != null)
-        {
-            player.transform.position = teleportTarget.position;
-
-            Camera.main.transform.position = new Vector3(
-                CameraPosX,
-                CameraPosY,
-                Camera.main.transform.position.z
-            );
+            player         = null;
+            spriteRenderer.sprite = originalSprite;
+            isTeleporting  = false;
         }
     }
 }
