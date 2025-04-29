@@ -57,7 +57,7 @@ public class InventoryManager : MonoBehaviour
         if (index >= 0 && index < items.Count)
         {
             selectedIndex = index;
-            UpdateItemInfo();  
+            UpdateItemInfo();
         }
     }
 
