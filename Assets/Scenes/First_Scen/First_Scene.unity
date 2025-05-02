@@ -2508,7 +2508,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.6617274, y: 0}
+  m_Offset: {x: 0.3533063, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2518,7 +2518,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 17.876545, y: 10.8}
+  m_Size: {x: 18.49339, y: 10.8}
   m_EdgeRadius: 0
 --- !u!212 &254680173
 SpriteRenderer:
@@ -3066,8 +3066,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.240005, y: 0.39874268}
-  m_SizeDelta: {x: -133.82, y: -16.64}
+  m_AnchoredPosition: {x: -20.899994, y: -0.17300415}
+  m_SizeDelta: {x: -140.34, y: -15.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299985323
 MonoBehaviour:
@@ -3892,7 +3892,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.04585576, y: -1.703982}
+  m_Offset: {x: 0.032203197, y: -2.1035528}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3902,7 +3902,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.2243714, y: 1.7856572}
+  m_Size: {x: 1.350605, y: 1.0591642}
   m_EdgeRadius: 0
 --- !u!212 &395462749
 SpriteRenderer:
@@ -4419,11 +4419,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbf7d92de8df644cafd962e4465e917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportSource: {fileID: 0}
-  teleportClip: {fileID: 0}
   teleportTarget: {fileID: 58084193}
-  teleportDelay: 3
   newSprite: {fileID: -4045694305560540636, guid: b9b6884275e72514499ec9f73650433f, type: 3}
+  CameraPosX: 33
+  CameraPosY: 0.002
+  NeededAction: 1
+  teleportDelay: 3
 --- !u!1 &458446437
 GameObject:
   m_ObjectHideFlags: 0
@@ -6494,8 +6495,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 19.699997, y: 0.39811707}
-  m_SizeDelta: {x: -134.94, y: -16.64}
+  m_AnchoredPosition: {x: 20.400002, y: -0.17344666}
+  m_SizeDelta: {x: -142.63, y: -15.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &749481500
 MonoBehaviour:
@@ -8314,7 +8315,7 @@ Transform:
   m_GameObject: {fileID: 996475821}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.17, y: 21.917, z: 0}
+  m_LocalPosition: {x: -2.93, y: 22.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8368,7 +8369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -8809,8 +8810,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.073}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -57.39, y: 0.3999939}
-  m_SizeDelta: {x: -134.61, y: -16.64}
+  m_AnchoredPosition: {x: -61.179993, y: 0}
+  m_SizeDelta: {x: -142.2, y: -15.06}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1024731224
 MonoBehaviour:
@@ -8899,12 +8900,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 720, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.011
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -10058,11 +10059,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbf7d92de8df644cafd962e4465e917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportSource: {fileID: 0}
-  teleportClip: {fileID: 0}
   teleportTarget: {fileID: 2103499317}
-  teleportDelay: 0
   newSprite: {fileID: 6228269804434467108, guid: f5992521e4ce3e74cad39ee926140fd4, type: 3}
+  CameraPosX: 0
+  CameraPosY: 0
+  NeededAction: 0
+  teleportDelay: 0
 --- !u!61 &1204658312
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10173,7 +10175,7 @@ Transform:
   m_GameObject: {fileID: 1204658310}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.14, y: 20.4593, z: 0}
+  m_LocalPosition: {x: -3.14, y: 20.54, z: 0}
   m_LocalScale: {x: 0.29513198, y: -0.090832084, z: 0.14235738}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11148,7 +11150,7 @@ Transform:
   m_GameObject: {fileID: 1431765602}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.09, y: 21.83, z: 0}
+  m_LocalPosition: {x: -2.9, y: 21.71, z: 0}
   m_LocalScale: {x: 1.3423076, y: 1.3125923, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12455,8 +12457,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 60.01999, y: 0.39924622}
-  m_SizeDelta: {x: -133.86, y: -16.64}
+  m_AnchoredPosition: {x: 64.03, y: -0.16999817}
+  m_SizeDelta: {x: -141.87, y: -15.49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1703375616
 MonoBehaviour:
@@ -15124,11 +15126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfbf7d92de8df644cafd962e4465e917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teleportSource: {fileID: 0}
-  teleportClip: {fileID: 0}
   teleportTarget: {fileID: 996475823}
-  teleportDelay: 0
   newSprite: {fileID: 6228269804434467108, guid: f5992521e4ce3e74cad39ee926140fd4, type: 3}
+  CameraPosX: -0.25
+  CameraPosY: 23.75
+  NeededAction: 0
+  teleportDelay: 0
 --- !u!61 &2060534269
 BoxCollider2D:
   m_ObjectHideFlags: 0
