@@ -4424,6 +4424,7 @@ MonoBehaviour:
   CameraPosX: 33
   CameraPosY: 0.002
   NeededAction: 1
+  isActive: 0
   teleportDelay: 3
 --- !u!1 &458446437
 GameObject:
@@ -10064,6 +10065,7 @@ MonoBehaviour:
   CameraPosX: 0
   CameraPosY: 0
   NeededAction: 0
+  isActive: 1
   teleportDelay: 0
 --- !u!61 &1204658312
 BoxCollider2D:
@@ -15131,6 +15133,7 @@ MonoBehaviour:
   CameraPosX: -0.25
   CameraPosY: 23.75
   NeededAction: 0
+  isActive: 1
   teleportDelay: 0
 --- !u!61 &2060534269
 BoxCollider2D:
