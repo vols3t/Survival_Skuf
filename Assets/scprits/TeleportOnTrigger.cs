@@ -12,10 +12,12 @@ public class TeleportOnTrigger : MonoBehaviour
     public bool NeededAction;
     private bool playerIsInside = false;
     private GameObject player;
-
+    public bool isActive;
     public float teleportDelay = 0f; 
 
     private bool isTeleporting = false; 
+
+    public void SetActive() => isActive = true;
 
     void Start()
     {
@@ -24,28 +26,32 @@ public class TeleportOnTrigger : MonoBehaviour
     }
 
     void Update()
-    {
-        if (playerIsInside && (!NeededAction || (NeededAction && Input.GetKeyDown(KeyCode.F))))
-        {
-            if (!isTeleporting)
+    {   
+        if (isActive){
+            if (playerIsInside && (!NeededAction || (NeededAction && Input.GetKeyDown(KeyCode.F))))
             {
-                isTeleporting = true;
-                if (teleportDelay > 0f)
-                    StartCoroutine(TeleportWithDelay());
-                else
-                    Teleport();
+                if (!isTeleporting)
+                {
+                    isTeleporting = true;
+                    if (teleportDelay > 0f)
+                        StartCoroutine(TeleportWithDelay());
+                    else
+                        Teleport();
+                }
             }
         }
     }
 
     void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            playerIsInside = true;
-            player = other.gameObject;
-            if (NeededAction && newSprite != null)
-                spriteRenderer.sprite = newSprite;
+    {   
+        if (isActive){
+            if (other.CompareTag("Player"))
+            {
+                playerIsInside = true;
+                player = other.gameObject;
+                if (NeededAction && newSprite != null)
+                    spriteRenderer.sprite = newSprite;
+            }
         }
     }
 
