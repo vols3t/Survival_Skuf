@@ -2,27 +2,22 @@ using UnityEngine;
 
 public class QuestTrigger_First : MonoBehaviour
 {
-    public GameObject questUI;         
-    public GameObject inputFieldObj;   
-    public GameObject answerButton;   
-    
+    public QuestPanelController questUI;
     private bool playerInRange = false;
 
     void Start()
     {
-        questUI.SetActive(false);
-        inputFieldObj.SetActive(false);
-        answerButton.SetActive(false);
+        if (questUI != null && questUI.gameObject.activeSelf)
+        {
+            questUI.gameObject.SetActive(false);
+        }
     }
 
     void Update()
     {
-        if (playerInRange && Input.GetKeyDown(KeyCode.F))
+        if (playerInRange && Input.GetKeyDown(KeyCode.F) && !questUI.gameObject.activeSelf)
         {
-            questUI.SetActive(true);
-            inputFieldObj.SetActive(true);
-            answerButton.SetActive(true);
-            Time.timeScale = 0f;
+            questUI.ShowQuest();
         }
     }
 

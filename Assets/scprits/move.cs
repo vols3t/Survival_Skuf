@@ -36,8 +36,8 @@ public class movee : MonoBehaviour
     private Sprite[] currentAnimationSprites;
     private int currentFrameIndex;
     private float animationTimer;
-
     private float stepTimer;
+    private bool isMovementLocked = false;
 
     void Start()
     {
@@ -59,7 +59,12 @@ public class movee : MonoBehaviour
 
     void Update()
     {
-        // ввод
+        if (isMovementLocked)
+        {
+            moveVector = Vector2.zero;
+            return;
+        }
+
         moveVector.x = Input.GetAxisRaw("Horizontal");
         moveVector.y = Input.GetAxisRaw("Vertical");
         moveVector.Normalize();
@@ -72,11 +77,19 @@ public class movee : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isMovementLocked) return;
         rb.MovePosition(rb.position + moveVector * speed * Time.fixedDeltaTime);
     }
 
     void UpdateAnimation()
     {
+        if (isMovementLocked)
+        {
+            if (spriteRenderer.sprite != standartPoz && standartPoz != null)
+                spriteRenderer.sprite = standartPoz;
+            return;
+        }
+
         bool isMoving = moveVector != Vector2.zero;
 
         if (isMoving && footstepSource != null && footstepClip != null)
@@ -137,6 +150,19 @@ public class movee : MonoBehaviour
             currentFrameIndex = 0;
             animationTimer = 0f;
             currentAnimationSprites = null;
+        }
+    }
+
+    public void LockMovement(bool locked)
+    {
+        isMovementLocked = locked;
+        
+        if (locked)
+        {
+            moveVector = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
+            if (standartPoz != null)
+                spriteRenderer.sprite = standartPoz;
         }
     }
 }

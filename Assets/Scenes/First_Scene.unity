@@ -4707,9 +4707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077d1452645c45b48ae2779470208c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questUI: {fileID: 930155840}
-  inputFieldObj: {fileID: 1099235978}
-  answerButton: {fileID: 428949992}
+  questUI: {fileID: 930155842}
 --- !u!61 &430556735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5811,7 +5809,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -5842,7 +5840,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -28.913345, y: 0, z: 11.809753, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -9368,6 +9366,7 @@ MonoBehaviour:
   - {fileID: 1099235978}
   - {fileID: 563787606}
   - {fileID: 430556732}
+  playerMovement: {fileID: 395462746}
 --- !u!114 &930155843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11085,8 +11084,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -48.023884, y: -130.8}
-  m_SizeDelta: {x: 119.7122, y: 30}
+  m_AnchoredPosition: {x: -41.631, y: -130.8}
+  m_SizeDelta: {x: 132.5, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1099235980
 MonoBehaviour:

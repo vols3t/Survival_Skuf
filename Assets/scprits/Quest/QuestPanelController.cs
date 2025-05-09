@@ -9,11 +9,29 @@ public class QuestPanelController : MonoBehaviour
     public Button confirmButton;
     public string correctAnswer = "unity";
     public GameObject[] objectsToDisable;
+    public movee playerMovement;
 
     private void Start()
     {
+        gameObject.SetActive(false);
         feedbackText.gameObject.SetActive(false);
         confirmButton.onClick.AddListener(CheckAnswer);
+    }
+
+    public void ShowQuest()
+    {
+        playerMovement.LockMovement(true);
+        gameObject.SetActive(true);
+        inputField.text = "";
+        feedbackText.gameObject.SetActive(false);
+        Time.timeScale = 0f;
+    }
+
+    public void HideQuest()
+    {
+        playerMovement.LockMovement(false);
+        gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     private void CheckAnswer()
@@ -33,9 +51,7 @@ public class QuestPanelController : MonoBehaviour
                     if (obj != null) obj.SetActive(false);
                 }
             }
-
-            gameObject.SetActive(false);
-            Time.timeScale = 1f;
+            HideQuest();
         }
     }
 }
