@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fe3cebe55114e5f41bfa3bf092af4c70
+guid: c068f325cb5f50f4d9813e137b598354
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5341345307658493557
-    second: Frame 39_0
+      213: 7021503027047619147
+    second: "\u0441\u0442\u0443\u043B 2_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Frame 39_0
+      name: "\u0441\u0442\u0443\u043B 2_0"
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 553
-        height: 446
+        x: 24
+        y: 4
+        width: 53
+        height: 90
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b81e05a0ebabfd5b0800000000000000
-      internalID: -5341345307658493557
+      spriteID: b4ad0843dc3617160800000000000000
+      internalID: 7021503027047619147
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Frame 39_0: -5341345307658493557
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
