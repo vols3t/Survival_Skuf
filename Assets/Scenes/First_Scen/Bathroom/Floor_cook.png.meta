@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c068f325cb5f50f4d9813e137b598354
+guid: 9f2ad12c3cea0d04f95d2d938267e322
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7021503027047619147
-    second: "\u0441\u0442\u0443\u043B 2_0"
+      213: 7291125433113788571
+    second: "ChatGPT Image 10 \u043C\u0430\u044F 2025 \u0433., 19_07_41 7_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0441\u0442\u0443\u043B 2_0"
+      name: "ChatGPT Image 10 \u043C\u0430\u044F 2025 \u0433., 19_07_41 7_0"
       rect:
         serializedVersion: 2
-        x: 24
-        y: 4
-        width: 53
-        height: 90
+        x: 0
+        y: 0
+        width: 1133
+        height: 1133
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4ad0843dc3617160800000000000000
-      internalID: 7021503027047619147
+      spriteID: b90409d83f74f2560800000000000000
+      internalID: 7291125433113788571
       vertices: []
       indices: 
       edges: []
@@ -148,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u0441\u0442\u0443\u043B 2_0": 7021503027047619147
+      "ChatGPT Image 10 \u043C\u0430\u044F 2025 \u0433., 19_07_41 7_0": 7291125433113788571
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
