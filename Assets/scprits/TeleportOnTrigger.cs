@@ -117,7 +117,7 @@ public class TeleportOnTrigger : MonoBehaviour
         originalSprite = spriteRenderer.sprite;
 
         // Найдите объект с MusicManager в сцене и сохраните ссылку
-        musicManager = FindObjectOfType<MusicManager>();
+        //musicManager = FindObjectOfType<MusicManager>();
     }
 
     void Update()

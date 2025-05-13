@@ -8,14 +8,16 @@ public class PickupItem : MonoBehaviour
 
     void Update()
     {
-        // Если игрок в зоне действия предмета и нажимает клавишу F
         if (canPickup && Input.GetKeyDown(KeyCode.F))
         {
-            InventoryManager.Instance.AddItem(itemToPickup);
-            if (NeededDestroy)
+            bool added = InventoryUI.Instance.AddItem(itemToPickup);
+            Debug.Log("Item pickup attempted. Success: " + added);
+
+            if (added && NeededDestroy)
                 Destroy(gameObject);
         }
     }
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
