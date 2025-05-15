@@ -2,14 +2,38 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
-    public AudioClip mainMenuMusic;
-    public AudioClip gamePlayMusic;
+    public static MusicManager Instance;
+
     private AudioSource audioSource;
 
-    void Start()
+    [Header("Музыка")]
+    public AudioClip mainMenuMusic;
+    public AudioClip gameplayMusic;
+
+    private void Awake()
     {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         audioSource = GetComponent<AudioSource>();
-        PlayMainMenuMusic();
+    }
+
+    public void PlayMusic(AudioClip clip)
+    {
+        if (clip == null || audioSource.clip == clip)
+            return;
+
+        audioSource.Stop();
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 
     public void PlayMainMenuMusic()
@@ -17,18 +41,12 @@ public class MusicManager : MonoBehaviour
         PlayMusic(mainMenuMusic);
     }
 
+    public void PlayGameplayMusic()
+    {
+        PlayMusic(gameplayMusic);
+    }
     public void PlayGamePlayMusic()
     {
-        PlayMusic(gamePlayMusic);
-    }
-
-    private void PlayMusic(AudioClip clip)
-    {
-        if (audioSource.clip != clip)
-        {
-            audioSource.Stop();
-            audioSource.clip = clip;
-            audioSource.Play();
-        }
+        PlayGameplayMusic();
     }
 }
