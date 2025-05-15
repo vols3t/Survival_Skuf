@@ -44,12 +44,9 @@ public class QuestPanelController : MonoBehaviour
 
         if (isCorrect)
         {
-            if (objectsToDisable != null && objectsToDisable.Length > 0)
+            foreach (GameObject obj in objectsToDisable)
             {
-                foreach (GameObject obj in objectsToDisable)
-                {
-                    if (obj != null) obj.SetActive(false);
-                }
+                if (obj != null) obj.SetActive(false);
             }
             HideQuest();
         }
