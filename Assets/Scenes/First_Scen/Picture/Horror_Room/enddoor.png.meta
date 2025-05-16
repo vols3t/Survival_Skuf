@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 69f6bfcac6eeced4c8e59b26e8298502
+guid: 665a753adbf23ce4baa32b9eb7aae403
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2414344312186205312
-    second: "\u0434\u0438\u0432\u0430\u043D-no-bg-preview (carve.photos) 1_0"
+      213: -4585931770194176283
+    second: enddoor_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u0434\u0438\u0432\u0430\u043D-no-bg-preview (carve.photos) 1_0"
+      name: enddoor_0
       rect:
         serializedVersion: 2
-        x: 153
-        y: 293
-        width: 1249
-        height: 830
+        x: 355
+        y: 0
+        width: 1086
+        height: 1764
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 084f7553c59718120800000000000000
-      internalID: 2414344312186205312
+      spriteID: 5e6d5613a5f7b50c0800000000000000
+      internalID: -4585931770194176283
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "\u0434\u0438\u0432\u0430\u043D-no-bg-preview (carve.photos) 1_0": 2414344312186205312
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
