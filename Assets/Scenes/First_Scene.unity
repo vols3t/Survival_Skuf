@@ -201,7 +201,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -93.77997, y: 84.17}
+  m_AnchoredPosition: {x: -93.77995, y: 84.17}
   m_SizeDelta: {x: -272.25998, y: -236.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &20313112
@@ -14739,17 +14739,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1140620879}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68097160e9493f4eb5b93078597d1c6, type: 3}
+  m_Script: {fileID: 11500000, guid: c0a6d3f283174ce4f9d854b9ec3f58f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   teleportTarget: {fileID: 1677337582}
-  pairedTeleporter: {fileID: 1677337583}
-  newSprite: {fileID: 0}
-  CameraPosX: 55
-  CameraPosY: -9.5
-  NeededAction: 0
+  pairedTeleporter: {fileID: 1677337586}
+  activationType: 1
   isActive: 1
   teleportDelay: 0
+  activeSprite: {fileID: 8857390007749138907, guid: 4540dc3bad02466479c334ada2ce21b9, type: 3}
+  changeSprite: 1
+  CameraPosX: 55
+  CameraPosY: -9.5
 --- !u!1 &1149891261
 GameObject:
   m_ObjectHideFlags: 0
@@ -18991,7 +18992,7 @@ GameObject:
   - component: {fileID: 1677337582}
   - component: {fileID: 1677337585}
   - component: {fileID: 1677337584}
-  - component: {fileID: 1677337583}
+  - component: {fileID: 1677337586}
   m_Layer: 0
   m_Name: Teleport (2)
   m_TagString: Untagged
@@ -19014,26 +19015,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2016717676}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1677337583
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677337581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e68097160e9493f4eb5b93078597d1c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportTarget: {fileID: 84567702}
-  pairedTeleporter: {fileID: 1140620884}
-  newSprite: {fileID: 0}
-  CameraPosX: 33
-  CameraPosY: 0.02
-  NeededAction: 0
-  isActive: 1
-  teleportDelay: 0
 --- !u!61 &1677337584
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19135,6 +19116,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1677337586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677337581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0a6d3f283174ce4f9d854b9ec3f58f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  teleportTarget: {fileID: 84567702}
+  pairedTeleporter: {fileID: 1140620884}
+  activationType: 0
+  isActive: 1
+  teleportDelay: 0
+  activeSprite: {fileID: 0}
+  changeSprite: 1
+  CameraPosX: 33
+  CameraPosY: 0.02
 --- !u!1 &1686305585
 GameObject:
   m_ObjectHideFlags: 0
