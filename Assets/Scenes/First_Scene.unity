@@ -5837,8 +5837,8 @@ Transform:
   m_GameObject: {fileID: 312799689}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71.66, y: -12.19, z: 0}
-  m_LocalScale: {x: 0.12629403, y: 0.13765918, z: 0.03390436}
+  m_LocalPosition: {x: 71.636, y: -11.99, z: 0}
+  m_LocalScale: {x: 0.16403069, y: 0.17879173, z: 0.04403498}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 649834179}
@@ -10138,7 +10138,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 1.3}
+  m_Size: {x: 1.7, y: 1.2}
   m_EdgeRadius: 0
 --- !u!1 &650177705
 GameObject:
@@ -19478,7 +19478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19.22995, y: 11}
+  m_AnchoredPosition: {x: -19.22998, y: 11}
   m_SizeDelta: {x: -274.65, y: -113.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1466160530
